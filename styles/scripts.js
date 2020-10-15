@@ -1,12 +1,24 @@
 (function($){
 
     $(document).ready(function () {
+        $('body').append('<div class="loader-wrapper"><span class="loader"><span class="loader-inner"></span></span></div>');
+        $(window).on('load', function () {
+            setTimeout(removeLoader, 1000); //wait for page load PLUS two seconds.
+        });
+        function removeLoader() {
+            $(".loader-wrapper").fadeOut(500, function () {
+                // fadeOut complete. Remove the loading div
+                $(".loader-wrapper").remove(); //makes page more lightweight 
+            });
+        }
+
+
         $('.fullpage').fullpage({
             //options here
             autoScrolling: true,
             navigation: true,
             navigationPosition: 'left',
-            lazyLoading: false,
+            lazyLoading: true,
         });
         $('.close-button').click(function(){
             const checkbox = $('#toggle');
@@ -36,6 +48,7 @@
                 fullpage_api.moveSectionDown();
             }
         });
+
     });
 
 })(jQuery)
