@@ -1,0 +1,88 @@
+.hero-slide-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.hero-left {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    margin-left: 100px;
+}
+
+.hero-right {
+    background-image: url('./assets/image/profile-portrait.jpg');
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index:5
+}
+
+.hero-title-wrap {
+    display: flex;
+}
+
+.subtitle {
+    font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+    line-height: clamp(1rem, 2.5vw, 2rem)
+}
+
+.slide-number {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    height: 2.4rem;
+    margin-left: 8px;
+}
+
+.hero-paragraph {
+    max-width: 25vw;
+    font-size: clamp(1rem, 2.2vw, 1.8rem);
+    line-height: clamp(1.4rem, 3vw, 2.4rem)
+}
+
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+
+    .hero-left {
+        justify-content: center;
+        left: 0;
+        margin-left: 0;
+    }
+    .hero-paragraph {
+        max-width: 50vw;
+    }
+    .hero-right {
+        background-image: linear-gradient(
+            rgba(16, 16, 16, 0.6)
+        ),
+        url('./assets/image/profile-portrait.jpg');
+        width: 100%;
+        top: 80px;
+        right: 0;
+        
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    .hero-paragraph {
+        max-width: 80vw;
+    }
+    .hero-right {
+        top: 60px;
+    }
+}

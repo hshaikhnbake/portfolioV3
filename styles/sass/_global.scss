@@ -1,0 +1,37 @@
+$primaryFont: 'Questrial';
+$secondaryFont: 'DM Sans';
+
+$fontColor: whitesmoke;
+
+
+
+body {
+    background-color: #101010;
+    color: $fontColor;
+    font-family: $primaryFont;
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+    color: $fontColor;
+    text-transform: uppercase;
+}
+
+li {
+    color: $fontColor;
+}
+
+h1 {
+    font-family: $secondaryFont;
+    font-weight: 500;
+    font-size: clamp(3rem, 8vw, 9rem);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1280px;
+} 
