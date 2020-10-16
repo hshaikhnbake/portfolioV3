@@ -900,20 +900,20 @@ header .header-container {
     background-image: linear-gradient(rgba(16, 16, 16, 0.6)), url("./assets/image/profile-portrait.jpg");
   }
   .hero-right.second {
-    background-image: url("./assets/image/wordParty.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.6)));
-    background-image: url("./assets/image/wordParty.png"), linear-gradient(rgba(16, 16, 16, 0.6));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.6))), url("./assets/image/wordParty.png");
+    background-image: linear-gradient(rgba(16, 16, 16, 0.6)), url("./assets/image/wordParty.png");
   }
   .hero-right.third {
-    background-image: url("./assets/image/realEstate.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.6)));
-    background-image: url("./assets/image/realEstate.png"), linear-gradient(rgba(16, 16, 16, 0.6));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.6))), url("./assets/image/realEstate.png");
+    background-image: linear-gradient(rgba(16, 16, 16, 0.6)), url("./assets/image/realEstate.png");
   }
   .hero-right.forth {
-    background-image: url("./assets/image/restauarantApp.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.6)));
-    background-image: url("./assets/image/restauarantApp.png"), linear-gradient(rgba(16, 16, 16, 0.6));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.6))), url("./assets/image/restauarantApp.png");
+    background-image: linear-gradient(rgba(16, 16, 16, 0.6)), url("./assets/image/restauarantApp.png");
   }
   .hero-right.fifth {
-    background-image: url("./assets/image/jewelHub.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.6)));
-    background-image: url("./assets/image/jewelHub.png"), linear-gradient(rgba(16, 16, 16, 0.6));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.6))), url("./assets/image/jewelHub.png");
+    background-image: linear-gradient(rgba(16, 16, 16, 0.6)), url("./assets/image/jewelHub.png");
   }
 }
 
