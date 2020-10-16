@@ -103,20 +103,20 @@
             rgba(16, 16, 16, 0.6)), url('./assets/image/profile-portrait.jpg')
         }
         &.second {
-            background-image: url('./assets/image/wordParty.png'), linear-gradient(
-                rgba(16, 16, 16, 0.6))
+            background-image: linear-gradient(
+                rgba(16, 16, 16, 0.6)), url('./assets/image/wordParty.png')
         }
         &.third {
             background-image: url('./assets/image/realEstate.png'), linear-gradient(
                 rgba(16, 16, 16, 0.6))
         }
         &.forth {
-            background-image: url('./assets/image/restauarantApp.png'), linear-gradient(
-                rgba(16, 16, 16, 0.6))
+            background-image: linear-gradient(
+                rgba(16, 16, 16, 0.6)), url('./assets/image/restauarantApp.png')
         }
         &.fifth {
-            background-image: url('./assets/image/jewelHub.png'), linear-gradient(
-                rgba(16, 16, 16, 0.6))
+            background-image: linear-gradient(
+            rgba(16, 16, 16, 0.6)), url('./assets/image/jewelHub.png')
         }
     }
 }
