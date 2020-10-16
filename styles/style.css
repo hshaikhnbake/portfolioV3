@@ -200,7 +200,7 @@ html.fp-enabled,
   height: 25px;
   width: 3px;
   border: 0;
-  background: black;
+  background: rgba(255, 255, 255, 0.2);
   left: 50%;
   top: 50%;
   margin: -5px 0 0 -5px;
@@ -599,11 +599,14 @@ body {
 a {
   text-decoration: none;
   color: whitesmoke;
+  font-size: 1rem;
   text-transform: uppercase;
 }
 
 li {
   color: whitesmoke;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -614,10 +617,37 @@ h1 {
   margin-bottom: 20px;
 }
 
+h2 {
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: clamp(2rem, 5vw, 6rem);
+  margin-bottom: 80px;
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: clamp(1.2rem, 2.5vw, 1.6rem);
+}
+
 .wrapper {
   width: 80%;
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: 1440px;
+}
+
+.link-animate {
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.link-animate:hover, .link-animate:focus {
+  padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    margin-bottom: 40px;
+  }
 }
 
 header {
@@ -636,12 +666,15 @@ header nav {
   z-index: 200;
 }
 
+header nav.dark {
+  background-color: #101010;
+}
+
 header nav #toggle {
   display: none;
 }
 
 header nav .drop-down-nav {
-  font-size: 1.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -654,6 +687,10 @@ header nav .drop-down-nav {
   transition: all 0.8s ease;
 }
 
+header nav .drop-down-nav li {
+  display: block;
+}
+
 header nav .drop-down-container.left {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
@@ -662,14 +699,14 @@ header nav .drop-down-container.left {
 }
 
 header nav .drop-down-container.left a {
-  margin: 20px 10px;
-  padding: 20px 0;
+  padding: 10px 0;
+  margin: 10px;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
 header nav .drop-down-container.left a:hover, header nav .drop-down-container.left a:focus {
-  padding-left: 30px;
+  padding-left: 20px;
 }
 
 header nav .drop-down-container.left p {
@@ -677,7 +714,7 @@ header nav .drop-down-container.left p {
 }
 
 header nav .drop-down-container.right a {
-  padding: 30px;
+  padding: 20px;
 }
 
 header nav .drop-down-container.right p {
@@ -699,7 +736,8 @@ header nav label[for="toggle"] {
 header nav img {
   max-width: 100%;
   height: auto;
-  padding: 20px;
+  padding: 10px;
+  cursor: pointer;
 }
 
 header nav ul a {
@@ -728,12 +766,22 @@ header nav ul a {
     padding: 10px;
   }
   header nav .drop-down-container.left {
-    padding: 60px 40px;
+    padding: 40px;
   }
-  header nav .drop-down-container.left a {
-    margin: 10px 10px;
-    padding: 20px 0;
-  }
+}
+
+header .header-container {
+  width: 100%;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hero-slide-container {
@@ -757,7 +805,6 @@ header nav ul a {
 }
 
 .hero-right {
-  background-image: url("./assets/image/profile-portrait.jpg");
   background-size: cover;
   width: 50%;
   height: 100%;
@@ -769,10 +816,41 @@ header nav ul a {
   z-index: 5;
 }
 
+.hero-right.first {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.2))), url("./assets/image/profile-portrait.jpg");
+  background-image: linear-gradient(rgba(16, 16, 16, 0.2)), url("./assets/image/profile-portrait.jpg");
+}
+
+.hero-right.second {
+  background-image: url("./assets/image/wordParty.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.2)));
+  background-image: url("./assets/image/wordParty.png"), linear-gradient(rgba(16, 16, 16, 0.2));
+}
+
+.hero-right.third {
+  background-image: url("./assets/image/realEstate.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.2)));
+  background-image: url("./assets/image/realEstate.png"), linear-gradient(rgba(16, 16, 16, 0.2));
+}
+
+.hero-right.forth {
+  background-image: url("./assets/image/restauarantApp.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.2)));
+  background-image: url("./assets/image/restauarantApp.png"), linear-gradient(rgba(16, 16, 16, 0.2));
+}
+
+.hero-right.fifth {
+  background-image: url("./assets/image/jewelHub.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.2)));
+  background-image: url("./assets/image/jewelHub.png"), linear-gradient(rgba(16, 16, 16, 0.2));
+}
+
 .hero-title-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.hero-title-wrap.center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .subtitle {
@@ -790,6 +868,11 @@ header nav ul a {
   max-width: 25vw;
   font-size: clamp(1rem, 2.2vw, 1.8rem);
   line-height: clamp(1.4rem, 3vw, 2.4rem);
+  padding-bottom: 40px;
+}
+
+.hero-container link-container {
+  padding: 20px;
 }
 
 /* Portrait tablet and small desktops */
@@ -806,11 +889,31 @@ header nav ul a {
     max-width: 50vw;
   }
   .hero-right {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.6)));
+    background-image: linear-gradient(rgba(16, 16, 16, 0.6));
+    width: 100%;
+    top: 60px;
+    right: 0;
+  }
+  .hero-right.first {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.6))), url("./assets/image/profile-portrait.jpg");
     background-image: linear-gradient(rgba(16, 16, 16, 0.6)), url("./assets/image/profile-portrait.jpg");
-    width: 100%;
-    top: 80px;
-    right: 0;
+  }
+  .hero-right.second {
+    background-image: url("./assets/image/wordParty.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.6)));
+    background-image: url("./assets/image/wordParty.png"), linear-gradient(rgba(16, 16, 16, 0.6));
+  }
+  .hero-right.third {
+    background-image: url("./assets/image/realEstate.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.6)));
+    background-image: url("./assets/image/realEstate.png"), linear-gradient(rgba(16, 16, 16, 0.6));
+  }
+  .hero-right.forth {
+    background-image: url("./assets/image/restauarantApp.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.6)));
+    background-image: url("./assets/image/restauarantApp.png"), linear-gradient(rgba(16, 16, 16, 0.6));
+  }
+  .hero-right.fifth {
+    background-image: url("./assets/image/jewelHub.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.6)));
+    background-image: url("./assets/image/jewelHub.png"), linear-gradient(rgba(16, 16, 16, 0.6));
   }
 }
 
@@ -823,3 +926,208 @@ header nav ul a {
     top: 60px;
   }
 }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #101010;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 300;
+}
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  -webkit-animation: loader 2s infinite ease;
+          animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  -webkit-animation: loader-inner 2s infinite ease-in;
+          animation: loader-inner 2s infinite ease-in;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+section.about-me {
+  padding: 140px 0;
+}
+
+.story p {
+  letter-spacing: 0.3px;
+  margin-bottom: 40px;
+}
+
+.list-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.list-container h2, .list-container .skill-list {
+  width: 50%;
+}
+
+.list-container .skill-list li {
+  display: inline-block;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 5px;
+}
+
+.experience-wrap {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0 24px;
+}
+
+.experience-wrap .number {
+  display: inline-block;
+  margin-right: 24px;
+  padding: 8px 0;
+}
+
+.experience-wrap .job-title {
+  padding: 8px 0;
+}
+
+.experience-wrap .muted-text {
+  color: grey;
+}
+
+/* Portrait tablet and small desktops */
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  section.about-me {
+    padding: 80px 0;
+  }
+  .list-container {
+    display: block;
+  }
+  .list-container h2, .list-container .skill-list {
+    width: 100%;
+  }
+}
+
+/* Landscape phones and down */

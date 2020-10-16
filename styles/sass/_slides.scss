@@ -15,7 +15,6 @@
 }
 
 .hero-right {
-    background-image: url('./assets/image/profile-portrait.jpg');
     background-size: cover;
     width: 50%;
     height: 100%;
@@ -24,11 +23,34 @@
     right: 0;
     top: 0;
     bottom: 0;
-    z-index:5
+    z-index:5;
+    &.first {
+        background-image: linear-gradient(
+            rgba(16, 16, 16, 0.2)), url('./assets/image/profile-portrait.jpg')
+    }
+    &.second {
+        background-image: url('./assets/image/wordParty.png'), linear-gradient(
+            rgba(16, 16, 16, 0.2))
+    }
+    &.third {
+        background-image: url('./assets/image/realEstate.png'), linear-gradient(
+            rgba(16, 16, 16, 0.2))
+    }
+    &.forth {
+        background-image: url('./assets/image/restauarantApp.png'), linear-gradient(
+            rgba(16, 16, 16, 0.2))
+    }
+    &.fifth {
+        background-image: url('./assets/image/jewelHub.png'), linear-gradient(
+            rgba(16, 16, 16, 0.2))
+    } 
 }
 
 .hero-title-wrap {
     display: flex;
+    &.center {
+        justify-content: center;
+    }
 }
 
 .subtitle {
@@ -45,10 +67,15 @@
 .hero-paragraph {
     max-width: 25vw;
     font-size: clamp(1rem, 2.2vw, 1.8rem);
-    line-height: clamp(1.4rem, 3vw, 2.4rem)
+    line-height: clamp(1.4rem, 3vw, 2.4rem);
+    padding-bottom: 40px;
 }
 
-
+.hero-container {
+    link-container {
+        padding: 20px;
+    }
+}
 
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
@@ -67,13 +94,30 @@
     }
     .hero-right {
         background-image: linear-gradient(
-            rgba(16, 16, 16, 0.6)
-        ),
-        url('./assets/image/profile-portrait.jpg');
+            rgba(16, 16, 16, 0.6));
         width: 100%;
-        top: 80px;
+        top: 60px;
         right: 0;
-        
+            &.first {
+        background-image: linear-gradient(
+            rgba(16, 16, 16, 0.6)), url('./assets/image/profile-portrait.jpg')
+        }
+        &.second {
+            background-image: url('./assets/image/wordParty.png'), linear-gradient(
+                rgba(16, 16, 16, 0.6))
+        }
+        &.third {
+            background-image: url('./assets/image/realEstate.png'), linear-gradient(
+                rgba(16, 16, 16, 0.6))
+        }
+        &.forth {
+            background-image: url('./assets/image/restauarantApp.png'), linear-gradient(
+                rgba(16, 16, 16, 0.6))
+        }
+        &.fifth {
+            background-image: url('./assets/image/jewelHub.png'), linear-gradient(
+                rgba(16, 16, 16, 0.6))
+        }
     }
 }
 

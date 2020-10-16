@@ -1,0 +1,70 @@
+section.about-me {
+        padding: 140px 0;
+    }
+
+
+.story {
+    p {
+        letter-spacing: 0.3px;
+        margin-bottom: 40px;
+    }
+}
+
+.list-container {
+    display: flex;
+    h2, .skill-list {
+        width: 50%;
+    }
+    .skill-list {
+        li {
+            display: inline-block;
+            border: 1px solid white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 5px;
+        }
+    }
+}
+
+.experience-wrap {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    display: flex;
+    margin: 10px 0 24px;
+    .number {
+        display: inline-block;
+        margin-right: 24px;
+        padding: 8px 0;
+    }
+    .job-title {
+        padding: 8px 0;
+    }
+    .muted-text {
+        color: grey;
+    }
+}
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+    section.about-me {
+            padding: 80px 0;
+        }
+    
+    .list-container {
+        display: block;
+        h2, .skill-list {
+            width: 100%;
+        }
+    }
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+}
