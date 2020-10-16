@@ -29,6 +29,9 @@
 
 .hero-title-wrap {
     display: flex;
+    &.center {
+        justify-content: center;
+    }
 }
 
 .subtitle {
@@ -71,7 +74,7 @@
         ),
         url('./assets/image/profile-portrait.jpg');
         width: 100%;
-        top: 80px;
+        top: 60px;
         right: 0;
         
     }
