@@ -38,6 +38,20 @@
             }
         });
 
+        $(window).on('touchend', function (e) {
+            let end = e.changedTouches[0];
+
+            if (end.screenY - start.screenY > 0) {
+                fullpage_api.moveSectionDown();
+                console.log('down!')
+            }
+            else if (end.screenY - start.screenY < 0) {
+                
+                fullpage_api.moveSectionUp();
+                console.log('up!')
+            }
+        });
+
     });
     $('body').append('<div class="loader-wrapper"><span class="loader"><span class="loader-inner"></span></span></div>');
     $(window).on('load', function () {
