@@ -6,10 +6,8 @@
             autoScrolling: true,
             navigation: true,
             navigationPosition: 'left',
+            responsiveWidth: 768
         });
-        if ($(window).width() < 480) {
-            fullpage_api.setAutoScrolling(false);
-        }
         $('.close-button').click(function(){
             const checkbox = $('#toggle');
             checkbox.prop('checked', !checkbox.prop("checked"));
