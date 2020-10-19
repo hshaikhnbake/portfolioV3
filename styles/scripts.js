@@ -5,8 +5,9 @@
             console.log("yo")
             $('.fullpage').fullpage({
                 autoScrolling: false,
-                fitToSection: false,
+                
             });
+            fullpage_api.setAutoScrolling(false);
         } else {
             $('.fullpage').fullpage({
                 fitToSection: true,
