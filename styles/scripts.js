@@ -1,22 +1,15 @@
 (function($){
 
     $(document).ready(function () {
+        $('.fullpage').fullpage({
+            fitToSection: true,
+            autoScrolling: true,
+            navigation: true,
+            navigationPosition: 'left',
+        });
         if ($(window).width() < 480) {
-            console.log("yo")
-            $('.fullpage').fullpage({
-                autoScrolling: false,
-                
-            });
             fullpage_api.setAutoScrolling(false);
-        } else {
-            $('.fullpage').fullpage({
-                fitToSection: true,
-                autoScrolling: true,
-                navigation: true,
-                navigationPosition: 'left',
-            });
-            fullpage_api.setScrollingSpeed(1000);
-        };
+        }
         $('.close-button').click(function(){
             const checkbox = $('#toggle');
             checkbox.prop('checked', !checkbox.prop("checked"));
