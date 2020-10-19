@@ -1,14 +1,19 @@
 (function($){
 
     $(document).ready(function () {
-
-        $('.fullpage').fullpage({
-            //options here
-            autoScrolling: true,
-            navigation: true,
-            navigationPosition: 'left',
-            lazyLoading: true,
-        });
+        if ($(window).width() < 480) {
+            console.log("yo")
+            $('.fullpage').fullpage({
+                autoScrolling: false,
+            });
+        } else {
+            $('.fullpage').fullpage({
+                autoScrolling: true,
+                navigation: true,
+                navigationPosition: 'left',
+            });
+            fullpage_api.setScrollingSpeed(1000);
+        };
         $('.close-button').click(function(){
             const checkbox = $('#toggle');
             checkbox.prop('checked', !checkbox.prop("checked"));
@@ -21,29 +26,36 @@
             $('.link-animate:not(:hover)').css('color', 'white')
         }); 
 
-        let start = null; //global
 
-        $(window).on('touchstart', function (e) {
-            start = e.changedTouches[0];
-        });
 
-        $(window).on('touchend', function (e) {
-            let end = e.changedTouches[0];
 
-            if (end.screenX - start.screenX > 0) {
-                fullpage_api.moveSectionUp();
-            }
-            else if (end.screenX - start.screenX < 0) {
-                fullpage_api.moveSectionDown();
-            }
-        });
+        // let start = null; //global
 
-        if (screen.width <= 767) {
-                $('.fullpage').fullpage({autoScrolling: false});
-                $(window).on('swipeup', function () { console.log("up"); fullpage_api.moveSectionUp(); });
-                $(window).on('swipedown', function () { console.log("down"); fullpage_api.moveSectionDown(); });
-            }
-        
+        // $(window).on('touchstart', function (e) {
+        //     start = e.changedTouches[0];
+        // });
+
+        // $(window).on('touchend', function (e) {
+        //     let end = e.changedTouches[0];
+
+        //     if (end.screenX - start.screenX > 0) {
+        //         console.log("right")
+        //         fullpage_api.moveSectionUp();
+        //     }
+        //     if (end.screenY - start.screenY > 0) {
+        //         fullpage_api.moveSectionUp();
+        //         console.log("down")
+        //     }
+
+        //     else if (end.screenX - start.screenX < 0) {
+        //         fullpage_api.moveSectionDown();
+        //         console.log("left")
+        //     }
+        //     else if (end.screenY - start.screenY < 0) {
+        //         console.log("up")
+        //         fullpage_api.moveSectionDown();
+        //     }
+        // });
 
     });
     $('body').append('<div class="loader-wrapper"><span class="loader"><span class="loader-inner"></span></span></div>');
