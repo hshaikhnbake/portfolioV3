@@ -5,9 +5,11 @@
             console.log("yo")
             $('.fullpage').fullpage({
                 autoScrolling: false,
+                fitToSection: false,
             });
         } else {
             $('.fullpage').fullpage({
+                fitToSection: true,
                 autoScrolling: true,
                 navigation: true,
                 navigationPosition: 'left',
