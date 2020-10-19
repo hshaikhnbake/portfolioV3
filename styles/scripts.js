@@ -25,33 +25,25 @@
 
 
 
-        // let start = null; //global
+        let start = null; //global
 
-        // $(window).on('touchstart', function (e) {
-        //     start = e.changedTouches[0];
-        // });
+        $(window).on('touchstart', function (e) {
+            start = e.changedTouches[0];
+        });
 
-        // $(window).on('touchend', function (e) {
-        //     let end = e.changedTouches[0];
+        $(window).on('touchend', function (e) {
+            let end = e.changedTouches[0];
 
-        //     if (end.screenX - start.screenX > 0) {
-        //         console.log("right")
-        //         fullpage_api.moveSectionUp();
-        //     }
-        //     if (end.screenY - start.screenY > 0) {
-        //         fullpage_api.moveSectionUp();
-        //         console.log("down")
-        //     }
+            if (end.screenX - start.screenX > 0) {
+                console.log("right")
+                fullpage_api.moveSectionUp();
+            }
 
-        //     else if (end.screenX - start.screenX < 0) {
-        //         fullpage_api.moveSectionDown();
-        //         console.log("left")
-        //     }
-        //     else if (end.screenY - start.screenY < 0) {
-        //         console.log("up")
-        //         fullpage_api.moveSectionDown();
-        //     }
-        // });
+            else if (end.screenX - start.screenX < 0) {
+                fullpage_api.moveSectionDown();
+                console.log("left")
+            }
+        });
 
     });
     $('body').append('<div class="loader-wrapper"><span class="loader"><span class="loader-inner"></span></span></div>');
