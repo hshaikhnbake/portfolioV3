@@ -254,27 +254,24 @@ html.fp-enabled,
     //     margin: 0;
     // }
     #fp-nav {
-        top: 93%;
+        top: 80%;
         width: 100%;
         display: flex;
-        justify-content: center;
-    }
+        justify-content: flex-end;
+        left: -17px;
+        }
 
-    #fp-nav ul li a {
-        position: absolute;
-        height: 20px;
-        top: 0px;
-        left: 0px;
-    }
-    #fp-nav.fp-left{
-        left: 0;
-    }
+    // #fp-nav ul li a {
+    //     position: absolute;
+    //     height: 20px;
+    //     top: 0px;
+    //     left: 0px;
+    // }
+    // #fp-nav.fp-left{
+    //     left: 0;
+    // }
 
-    #fp-nav ul {
-        display: flex;
-    }
-
-        #fp-nav li {
-        transform: rotate(90deg)
-    }
+    // #fp-nav ul {
+    //     display: flex;
+    // }
 }
