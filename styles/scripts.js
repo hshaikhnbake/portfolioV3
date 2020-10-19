@@ -3,11 +3,13 @@
     $(document).ready(function () {
         $('.fullpage').fullpage({
             fitToSection: true,
+            fixedElements: '.footer',
             autoScrolling: true,
             navigation: true,
             navigationPosition: 'left',
-            responsiveWidth: 768
+            // responsiveWidth: 768
         });
+
         $('.close-button').click(function(){
             const checkbox = $('#toggle');
             checkbox.prop('checked', !checkbox.prop("checked"));

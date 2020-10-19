@@ -1091,3 +1091,6 @@ section.about-me {
 }
 
 /* Landscape phones and down */
+footer {
+  height: 300px;
+}
