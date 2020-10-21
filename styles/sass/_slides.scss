@@ -71,10 +71,8 @@
     padding-bottom: 40px;
 }
 
-.hero-container {
-    link-container {
-        padding: 20px;
-    }
+a.left-margin {
+    margin-left: 10px;
 }
 
 /* Portrait tablet and small desktops */
@@ -104,19 +102,19 @@
         }
         &.second {
             background-image: linear-gradient(
-                rgba(16, 16, 16, 0.6)), url('./assets/image/wordParty.png')
+                rgba(16, 16, 16, 0.8)), url('./assets/image/wordParty.png')
         }
         &.third {
             background-image: linear-gradient(
-                rgba(16, 16, 16, 0.6)), url('./assets/image/realEstate.png')
+                rgba(16, 16, 16, 0.8)), url('./assets/image/realEstate.png')
         }
         &.forth {
             background-image: linear-gradient(
-                rgba(16, 16, 16, 0.6)), url('./assets/image/restauarantApp.png')
+                rgba(16, 16, 16, 0.8)), url('./assets/image/restauarantApp.png')
         }
         &.fifth {
             background-image: linear-gradient(
-            rgba(16, 16, 16, 0.6)), url('./assets/image/jewelHub.png')
+            rgba(16, 16, 16, 0.8)), url('./assets/image/jewelHub.png')
         }
     }
 }

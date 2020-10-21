@@ -255,9 +255,7 @@ html.fp-enabled,
     // }
     #fp-nav {
         top: 80%;
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
+        width: 50px;
         }
 
     // #fp-nav ul li a {
@@ -267,7 +265,8 @@ html.fp-enabled,
     //     left: 0px;
     // }
     #fp-nav.fp-left{
-        left: -17px;
+        right: 0;
+        left: auto;
     }
 
     // #fp-nav ul {

@@ -274,16 +274,11 @@ html.fp-enabled,
 @media (max-width: 480px) {
   #fp-nav {
     top: 80%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    width: 50px;
   }
   #fp-nav.fp-left {
-    left: -17px;
+    right: 0;
+    left: auto;
   }
 }
 
@@ -689,6 +684,7 @@ header nav ul a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 101;
 }
 
 /* Portrait tablet and small desktops */
@@ -816,8 +812,8 @@ header .header-container {
   padding-bottom: 40px;
 }
 
-.hero-container link-container {
-  padding: 20px;
+a.left-margin {
+  margin-left: 10px;
 }
 
 /* Portrait tablet and small desktops */
@@ -845,20 +841,20 @@ header .header-container {
     background-image: linear-gradient(rgba(16, 16, 16, 0.6)), url("./assets/image/profile-portrait.jpg");
   }
   .hero-right.second {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.6))), url("./assets/image/wordParty.png");
-    background-image: linear-gradient(rgba(16, 16, 16, 0.6)), url("./assets/image/wordParty.png");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.8))), url("./assets/image/wordParty.png");
+    background-image: linear-gradient(rgba(16, 16, 16, 0.8)), url("./assets/image/wordParty.png");
   }
   .hero-right.third {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.6))), url("./assets/image/realEstate.png");
-    background-image: linear-gradient(rgba(16, 16, 16, 0.6)), url("./assets/image/realEstate.png");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.8))), url("./assets/image/realEstate.png");
+    background-image: linear-gradient(rgba(16, 16, 16, 0.8)), url("./assets/image/realEstate.png");
   }
   .hero-right.forth {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.6))), url("./assets/image/restauarantApp.png");
-    background-image: linear-gradient(rgba(16, 16, 16, 0.6)), url("./assets/image/restauarantApp.png");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.8))), url("./assets/image/restauarantApp.png");
+    background-image: linear-gradient(rgba(16, 16, 16, 0.8)), url("./assets/image/restauarantApp.png");
   }
   .hero-right.fifth {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.6))), url("./assets/image/jewelHub.png");
-    background-image: linear-gradient(rgba(16, 16, 16, 0.6)), url("./assets/image/jewelHub.png");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.8))), url("./assets/image/jewelHub.png");
+    background-image: linear-gradient(rgba(16, 16, 16, 0.8)), url("./assets/image/jewelHub.png");
   }
 }
 
@@ -1031,6 +1027,7 @@ section.about-me {
 }
 
 .list-container .skill-list li {
+  letter-spacing: 0.3px;
   display: inline-block;
   border: 1px solid white;
   padding: 10px;
@@ -1039,8 +1036,8 @@ section.about-me {
 }
 
 .experience-wrap {
-  font-size: 1.2rem;
-  letter-spacing: 1px;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
