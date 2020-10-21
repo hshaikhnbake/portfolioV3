@@ -26,7 +26,7 @@
     z-index:5;
     &.first {
         background-image: linear-gradient(
-            rgba(16, 16, 16, 0.2)), url('./assets/image/profile-portrait.jpg')
+            rgba(16, 16, 16, 0.4)), url('./assets/image/profile-portrait.jpg')
     }
     &.second {
         background-image: url('./assets/image/wordParty.png'), linear-gradient(
