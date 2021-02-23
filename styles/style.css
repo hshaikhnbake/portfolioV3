@@ -777,8 +777,13 @@ header .header-container {
 }
 
 .hero-right.fifth {
-  background-image: url("./assets/image/jewelHub.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.2)));
-  background-image: url("./assets/image/jewelHub.png"), linear-gradient(rgba(16, 16, 16, 0.2));
+  background-image: url("./assets/image/etelligent.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.2)));
+  background-image: url("./assets/image/etelligent.png"), linear-gradient(rgba(16, 16, 16, 0.2));
+}
+
+.hero-right.sixth {
+  background-image: url("./assets/image/tic-tac-toe.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(16, 16, 16, 0.2)));
+  background-image: url("./assets/image/tic-tac-toe.png"), linear-gradient(rgba(16, 16, 16, 0.2));
 }
 
 .hero-title-wrap {
