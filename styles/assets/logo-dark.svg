@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37.5pt" height="37.499999pt" viewBox="0 0 37.5 37.499999" version="1.2">
+<defs>
+<g>
+<symbol overflow="visible" id="glyph0-0">
+<path style="stroke:none;" d="M 0.828125 -16.546875 L 12.328125 -16.546875 L 12.328125 0 L 0.828125 0 Z M 5.875 -8.28125 L 1.953125 -13.953125 L 1.953125 -2.59375 Z M 2.28125 -15.421875 L 6.578125 -9.25 L 10.84375 -15.421875 Z M 6.578125 -7.296875 L 2.28125 -1.125 L 10.84375 -1.125 Z M 7.25 -8.28125 L 11.203125 -2.59375 L 11.203125 -13.953125 Z M 7.25 -8.28125 "/>
+</symbol>
+<symbol overflow="visible" id="glyph0-1">
+<path style="stroke:none;" d="M 15.40625 -16.546875 L 15.40625 0 L 13.53125 0 L 13.53125 -7.375 L 3.90625 -7.375 L 3.90625 0 L 2.03125 0 L 2.03125 -16.546875 L 3.90625 -16.546875 L 3.90625 -9.203125 L 13.53125 -9.203125 L 13.53125 -16.546875 Z M 15.40625 -16.546875 "/>
+</symbol>
+</g>
+</defs>
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0,0,0);fill-opacity:1;" d="M 3.75 3.75 L 3.75 33.808594 L 33.808594 33.808594 L 33.808594 3.75 Z M 32.851562 32.851562 L 4.6875 32.851562 L 4.6875 4.6875 L 32.851562 4.6875 Z M 32.851562 32.851562 "/>
+<g style="fill:rgb(0,0,0);fill-opacity:1;">
+  <use xlink:href="#glyph0-1" x="10.039063" y="26.250003"/>
+</g>
+</g>
+</svg>

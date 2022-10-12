@@ -1,7 +1,6 @@
 .hero-slide-container {
   height: 100%;
   width: 100%;
-  position: relative;
 }
 
 .hero-left {
@@ -9,13 +8,13 @@
   align-items: center;
   position: absolute;
   height: 100%;
-  width: 100%;
   z-index: 10;
   margin-left: 100px;
 }
 
 .hero-right {
   background-size: cover;
+  background-position: center;
   width: 50%;
   height: 100%;
   position: absolute;
@@ -27,26 +26,6 @@
   &.first {
     background-image: linear-gradient(rgba(16, 16, 16, 0.4)),
       url("./assets/image/profile-portrait.jpg");
-  }
-  &.second {
-    background-image: url("./assets/image/wordParty.png"),
-      linear-gradient(rgba(16, 16, 16, 0.2));
-  }
-  &.third {
-    background-image: url("./assets/image/realEstate.png"),
-      linear-gradient(rgba(16, 16, 16, 0.2));
-  }
-  &.forth {
-    background-image: url("./assets/image/restauarantApp.png"),
-      linear-gradient(rgba(16, 16, 16, 0.2));
-  }
-  &.fifth {
-    background-image: url("./assets/image/etelligent.png"),
-      linear-gradient(rgba(16, 16, 16, 0.2));
-  }
-  &.sixth {
-    background-image: url("./assets/image/tic-tac-toe.png"),
-      linear-gradient(rgba(16, 16, 16, 0.2));
   }
 }
 
@@ -70,9 +49,10 @@
 
 .hero-paragraph {
   max-width: 25vw;
-  font-size: clamp(1rem, 2.2vw, 1.8rem);
-  line-height: clamp(1.4rem, 3vw, 2.4rem);
-  padding-bottom: 40px;
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+  line-height: clamp(1.8rem, 3.2vw, 2.6rem);
+  margin-bottom: clamp(24px, 2vw, 36px);
+  max-width: clamp(200px, 32vw, 560px)
 }
 
 a.left-margin {
@@ -93,6 +73,23 @@ a.left-margin {
   transform: rotate(90deg);
 }
 
+.learn-more {
+  margin-top: 32px;
+  display: inline-block;
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem) !important;
+  line-height: clamp(1rem, 2.5vw, 2rem) !important;
+}
+.social-link-container {
+
+  margin-top: 10px;
+  width: max-content;
+  a {
+    margin-right: 10px;
+    font-size: clamp(1.2rem, 2.2vw, 1.8rem) !important;
+    line-height: clamp(1rem, 2.5vw, 2rem) !important;
+  }
+}
+
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
 }
@@ -101,45 +98,29 @@ a.left-margin {
 @media (max-width: 768px) {
   .hero-left {
     justify-content: center;
-    left: 0;
     margin-left: 0;
+    width: 100%;
+    align-items: flex-end;
+    padding-bottom: 100px;
   }
   .hero-paragraph {
-    max-width: 50vw;
+    max-width: 80vw;
   }
   .hero-right {
-    background-image: linear-gradient(rgba(16, 16, 16, 0.6));
+    background-image: linear-gradient(rgba(16, 16, 16, 0.7));
     width: 100%;
     top: 60px;
     right: 0;
     &.first {
-      background-image: linear-gradient(rgba(16, 16, 16, 0.6)),
+      background-image: linear-gradient(rgba(16, 16, 16, 0.7)),
         url("./assets/image/profile-portrait.jpg");
     }
-    &.second {
-      background-image: linear-gradient(rgba(16, 16, 16, 0.8)),
-        url("./assets/image/wordParty.png");
-    }
-    &.third {
-      background-image: linear-gradient(rgba(16, 16, 16, 0.8)),
-        url("./assets/image/realEstate.png");
-    }
-    &.forth {
-      background-image: linear-gradient(rgba(16, 16, 16, 0.8)),
-        url("./assets/image/restauarantApp.png");
-    }
-    &.fifth {
-      background-image: linear-gradient(rgba(16, 16, 16, 0.8)),
-        url("./assets/image/jewelHub.png");
-    }
   }
+
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  .hero-paragraph {
-    max-width: 80vw;
-  }
   .hero-right {
     top: 60px;
   }

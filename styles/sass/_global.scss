@@ -15,14 +15,15 @@ body {
 a {
     text-decoration: none;
     color: $fontColor;
-    font-size: 1rem;
+    font-size: 1.4rem;
     text-transform: uppercase;
 
 }
 
 li {
     color: $fontColor;
-    font-size: 1rem;
+    font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+    line-height: clamp(1.8rem, 3.2vw, 2.6rem);
     text-transform: uppercase;
 }
 
@@ -30,8 +31,8 @@ h1 {
     font-family: $secondaryFont;
     font-weight: 500;
     font-size: clamp(3rem, 8vw, 9rem);
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: clamp(1.6rem, 3vw, 3rem);
+    margin-bottom: clamp(1.6rem, 3vw, 3rem);
 }
 
 h2 {
@@ -42,21 +43,40 @@ h2 {
 }
 
 p {
+    letter-spacing: 0.01em;
     font-size: clamp(1rem, 2vw, 1.2rem);
     line-height: clamp(1.2rem, 2.5vw, 1.6rem)
 }
 
 .wrapper {
-  width: 80%;
   margin: 0 auto;
   max-width: 1440px;
-} 
+  &.constrain {
+    width: 80%
+  }
+}
 
 .link-animate {
-    transition: all 0.4s ease-in-out;
+    transform: translateX(0px);
+    transition: transform 400ms ease-in-out;
+
     &:hover, &:focus {
-        padding-left: 20px;
+        transform: translateX(20px)
     }
+    
+}
+
+.link-orange {
+    color: white;
+    transition: color 200ms ease-in-out;
+    &:hover, &:focus {
+       color: orange;
+    }
+
+}
+
+.skill-highlight {
+    color: orange
 }
 
 @media (max-width: 768px) {

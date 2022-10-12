@@ -1,0 +1,44 @@
+body.work {
+    background-image:   linear-gradient(rgba(255, 255, 255, 0.8)), url("./assets/image/work-texture.jpg");
+    background-size: repeat;
+    color: black;
+    transition: all 5000ms linear;
+}
+
+.project {
+   color: black;
+}
+
+.number.work {
+    color: black
+}
+.muted-text.work {
+    margin: 10px 0px;
+}
+.muted-text.work-type {
+    background: orange;
+    border-radius: 6px;
+    color: black;
+    padding: 4px 6px;
+}
+.tech {
+    
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 8px;
+    margin-right: 8px;
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: 125%;
+    color: black;
+    &-1 {
+        background-image: linear-gradient(to right, rgb(233, 244, 245) 0%, rgb(209, 253, 230) 100%);
+    }
+    &-2 {
+        background-image: linear-gradient(to right, rgb(243, 245, 233) 0%, rgb(250, 237, 221) 100%);
+    }
+    &-3 {
+        background-image: linear-gradient(to right, rgb(245, 233, 243) 0%, rgb(213, 209, 253) 100%);
+    }
+}
