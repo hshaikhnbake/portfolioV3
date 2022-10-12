@@ -21,6 +21,14 @@ body.work {
     color: black;
     padding: 4px 6px;
 }
+.experience-wrap.work {
+    border-bottom: 1px solid rgba(47, 79, 79, 0.357);
+    margin: 0;
+    padding: 10px 0 24px;
+    &.last {
+        border-bottom: none;
+    }
+}
 .tech {
     
     margin-top: 10px;
